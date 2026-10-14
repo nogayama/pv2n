@@ -2,7 +2,7 @@
 
 
 
-1. 作業ディレクトリを作成する
+1. **作業ディレクトリを作成する**
 
     ```sh
     mkdir work
@@ -11,7 +11,7 @@
 
     
 
-2. 作業ディレクトリを初期化する
+2. **作業ディレクトリを初期化する**
 
     ```sh
     pv2n init
@@ -44,13 +44,14 @@
 
 
 
-3. 動画を文字起こしする
+3. **動画を文字起こしする**
+   
    ```sh
    pv2n transcribe <path/to/dir>/lecture.mp4
    ```
-
+   
    - `tree output`
-
+   
        ```
        output
        ├── cache
@@ -60,13 +61,14 @@
 
 
 
-4. 動画からキーフレームを抽出する
+4. **動画からキーフレームを抽出する**
+    
     ```sh
     pv2n extract-keyframes <path/to/dir>/lecture.mp4
     ```
-
+    
     - `tree output`
-
+    
         ```
         output
         ├── cache
@@ -101,11 +103,12 @@
         
         
     
-5. [手動操作] 不要な画像を削除する
+5. **[手動操作] 不要な画像を削除する**
+    
     1. `lecture.assets` ディレクトリを開く。
     2. 画像を確認し、不要なものを削除する。
     - `tree output`
-
+    
         ```
         output
         ├── cache
@@ -122,7 +125,7 @@
 
 
 
-6. [手動操作] 取りこぼしたフレームをキャプチャする
+6. **[手動操作] 取りこぼしたフレームをキャプチャする**
 
     ```sh
     pv2n capture <path/to/dir>/lecture.mp4 01:31.267 06:54.000
@@ -158,7 +161,8 @@
 
 
 
-7. キーフレームと文字起こしを含む最初の Markdown レポートを作成する。
+7. **キーフレームと文字起こしを含む最初の Markdown レポートを作成する**
+    
     ```sh
     pv2n md <path/to/dir>/lecture.mp4
     ```
@@ -179,7 +183,9 @@
 
 
 
-8. [任意] AI agent で講義ノートを生成する。AI agent を利用できる場合は、次のプロンプトを agent に送る。
+8. **[任意] AI agent で講義ノートを生成する**
+   
+    AI agent を利用できる場合は、次のプロンプトを agent に送る
     
     ```
     run agents/skills/transcript-to-notes/SKILL.md video=<path/to/dir>/lecture.mp4 lang=Japanese
